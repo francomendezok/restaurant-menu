@@ -2,13 +2,15 @@
   "name": "restaurant-menu",
   "version": "1.0.0",
   "description": "A Restaurant Menu",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --progress --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "Franco Mendez",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.8.1",
