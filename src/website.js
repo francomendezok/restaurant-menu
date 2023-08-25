@@ -1,13 +1,13 @@
 // First Load of the Page //
 import '../dist/style.css';
 import Background from '../dist/Images/huge.jpg';
-import Diamante from '../dist/Images/diamante.png';
+import loadContact from './contact';
 
 function createHeader () {
     const header = document.createElement('header');
     const h1 = document.createElement('h1');
 
-    h1.innerHTML = "Oblivion Restaurant";
+    h1.innerHTML = "OBLIVION RESTAURANT";
     h1.classList.add('h1');
     header.classList.add('header');
     setContainer().appendChild(header);
@@ -19,21 +19,61 @@ function createHeader () {
 function createNav () {
     const arr = ['Home','Menu','Contact'];
     const nav = document.createElement('nav');
+    let btns = [];
+    let home = false;
+    let menu = false;
+    let contact = false;
+    
     for (let i = 0; i < 3; i++) {
         const btn = document.createElement('button');
         btn.classList.add('button');
         btn.innerHTML = arr[i];
+        btn.id = arr[i].toLowerCase();
         nav.appendChild(btn);
-    }
+        btns.push(btn)
+    };
+
+    
+    btns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            btns.forEach(otherBtn => {
+                otherBtn.classList.remove('selected');
+            });
+    
+
+
+            btn.classList.add('selected');
+            if (btn.id === 'home' && !home) {
+                console.log(contact,home,menu);
+                contact = false;
+                home = true;
+                menu = false;
+                loadHome();
+            }
+            if (btn.id === 'menu' && !menu) {
+                console.log(contact,home,menu);
+                contact = false;
+                home = false;
+                menu = true;
+                loadMenu();
+            }
+            if (btn.id === 'contact' && !contact) {
+                console.log(contact,home,menu);
+                contact = true;
+                home = false;
+                menu = false;
+                loadContact();
+            }
+            
+        });
+    });
+
     nav.classList.add('nav');
     return nav;
 }
 
 function createMain () {
     const main = document.createElement('main');
-    const diamond = document.createElement('div');
-    diamond.classList.add('diamond');
-    main.appendChild(diamond)
     main.classList.add('main');
     setContainer().appendChild(main);
     return main;
@@ -58,7 +98,6 @@ function setContainer () {
     return content;
  }
 
-
  function printScreen () {
     const container = setContainer();
     container.appendChild(createHeader());
@@ -67,8 +106,4 @@ function setContainer () {
     return container;
  }
 
- printScreen();
-
- export {printScreen}
-// Export Header, Main and Footer // 
-// Export function that load page //
+ export default printScreen;

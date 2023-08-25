@@ -1,2 +1,4 @@
-import printScreen from './website.js'
+import printScreen from './website'
  
+
+printScreen();
