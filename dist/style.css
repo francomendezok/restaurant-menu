@@ -92,12 +92,6 @@ html, body {
 }
 
 
-.diamond {
-    width: 100px;
-    height: 100px;
-    background-image: url('../dist/Images/diamante.png');
-}
-
 .contact {
     width: 100%;
     height: 100%;
@@ -144,5 +138,212 @@ html, body {
     width: 600px;
     height: 450px;
     border: none;
+}
+
+@media (max-width: 450px) {
+    .h1 {
+        text-align: center;
+        font-size: 200%;
+        color: white;
+    }
     
+    .h3 {
+        text-align: center;
+        font-size: 100%;
+        font-style: italic;
+        color: white;
+    }
+    
+    .nav {
+        width: 80%;
+        height: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .button {
+        width: 20%;
+        height: 50%;
+        border-radius: 6px;
+        background-color: #090909;
+        color: white;
+        border: 1px solid #DAA520;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: #DAA520;
+        border: 1px solid white;
+        color: black;
+        font-weight: bold;
+    }
+    .button.selected {
+        background-color: #DAA520; 
+        color: black; 
+        font-weight: bold;
+      }
+    
+    .main {
+        width: 80%;
+        height: 75%;
+        background-color: black;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer {
+        width: 100%;
+        height: 10%;
+        background-color: black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 120%;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+    .h1 {
+        text-align: center;
+        font-size: 200%;
+        color: white;
+    }
+    
+    .h3 {
+        text-align: center;
+        font-size: 150%;
+        font-style: italic;
+        color: white;
+    }
+    
+    .nav {
+        width: 80%;
+        height: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .button {
+        width: 20%;
+        height: 50%;
+        border-radius: 6px;
+        background-color: #090909;
+        color: white;
+        border: 1px solid #DAA520;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: #DAA520;
+        border: 1px solid white;
+        color: black;
+        font-weight: bold;
+    }
+    .button.selected {
+        background-color: #DAA520; 
+        color: black; 
+        font-weight: bold;
+      }
+    
+    .main {
+        width: 80%;
+        height: 75%;
+        background-color: black;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main h1 {
+        font-size: 250%;
+    }
+    
+    .footer {
+        width: 100%;
+        height: 10%;
+        background-color: black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 120%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1100px) {
+    .h1 {
+        text-align: center;
+        font-size: 200%;
+        color: white;
+    }
+    
+    .h3 {
+        text-align: center;
+        font-size: 150%;
+        font-style: italic;
+        color: white;
+    }
+    
+    .nav {
+        width: 80%;
+        height: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .button {
+        width: 20%;
+        height: 50%;
+        border-radius: 6px;
+        background-color: #090909;
+        color: white;
+        border: 1px solid #DAA520;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: #DAA520;
+        border: 1px solid white;
+        color: black;
+        font-weight: bold;
+    }
+    .button.selected {
+        background-color: #DAA520; 
+        color: black; 
+        font-weight: bold;
+      }
+    
+    .main {
+        width: 60%;
+        height: 75%;
+        background-color: black;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main h1 {
+        font-size: 250%;
+    }
+
+    .photo {
+        width: 70%;
+        height: 60%;
+    }
+    
+    .footer {
+        width: 100%;
+        height: 10%;
+        background-color: black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 120%;
+    }
 }
