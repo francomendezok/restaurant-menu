@@ -27,7 +27,7 @@ function createContact () {
 function loadContact () {
     const main = document.querySelector('.main');
     const contact = createContact();
-    main.textContext = '';
+    main.innerHTML = '';
     main.appendChild(contact);
     return main;
 }

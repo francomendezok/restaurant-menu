@@ -2,6 +2,8 @@
 import '../dist/style.css';
 import Background from '../dist/Images/huge.jpg';
 import loadContact from './contact';
+import loadHome from './home';
+import loadMenu from './menu';
 
 function createHeader () {
     const header = document.createElement('header');
@@ -20,9 +22,10 @@ function createNav () {
     const arr = ['Home','Menu','Contact'];
     const nav = document.createElement('nav');
     let btns = [];
-    let home = false;
+    let home = true;
     let menu = false;
     let contact = false;
+
     
     for (let i = 0; i < 3; i++) {
         const btn = document.createElement('button');
@@ -30,7 +33,8 @@ function createNav () {
         btn.innerHTML = arr[i];
         btn.id = arr[i].toLowerCase();
         nav.appendChild(btn);
-        btns.push(btn)
+        btns.push(btn);
+        if (btn.id === "home") btn.classList.add('selected');
     };
 
     
@@ -44,21 +48,18 @@ function createNav () {
 
             btn.classList.add('selected');
             if (btn.id === 'home' && !home) {
-                console.log(contact,home,menu);
                 contact = false;
                 home = true;
                 menu = false;
                 loadHome();
             }
             if (btn.id === 'menu' && !menu) {
-                console.log(contact,home,menu);
                 contact = false;
                 home = false;
                 menu = true;
                 loadMenu();
             }
             if (btn.id === 'contact' && !contact) {
-                console.log(contact,home,menu);
                 contact = true;
                 home = false;
                 menu = false;
@@ -103,6 +104,7 @@ function setContainer () {
     container.appendChild(createHeader());
     container.appendChild(createMain());
     container.appendChild(createFooter());
+    loadHome();
     return container;
  }
 
