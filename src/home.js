@@ -3,7 +3,7 @@ function createHome () {
     const h1 = document.createElement('h1');
     const parragraph = document.createElement('p');
     const photo = new Image();
-    photo.src = '../dist/Images/wine.jpg';
+    photo.src = 'Images/wine.jpg';
     photo.classList.add('photo');
 
     parragraph.textContent = "Serving Great People with Great Food Since 1970"

@@ -1,6 +1,5 @@
 // First Load of the Page //
 import '../dist/style.css';
-import Background from '../dist/Images/huge.jpg';
 import loadContact from './contact';
 import loadHome from './home';
 import loadMenu from './menu';
